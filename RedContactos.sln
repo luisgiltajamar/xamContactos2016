@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedContactos", "RedContacto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmLibrary", "MvvmLibrary\MvvmLibrary.csproj", "{8F66D7B0-BF7D-4409-8BC2-7B32EEB74BC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactosModel", "..\ApiContactos\ContactosModel\ContactosModel.csproj", "{9ED0921C-59A3-4570-89E0-4B43E8FAA31D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactosModel", "..\ApiContactos2016XamGuay\ContactosModel\ContactosModel.csproj", "{9ED0921C-59A3-4570-89E0-4B43E8FAA31D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

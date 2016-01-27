@@ -43,9 +43,14 @@
     <Compile Include="Service\ServicioDatos.cs" />
     <Compile Include="Util\Cadenas.cs" />
     <Compile Include="ViewModel\AltaViewModel.cs" />
-    <Compile Include="ViewModel\ContactosViewModel.cs" />
+    <Compile Include="ViewModel\Contactos\ContactosViewModel.cs" />
+    <Compile Include="ViewModel\Contactos\AddContactoViewModel.cs" />
+    <Compile Include="ViewModel\Contactos\EnviarMensajeViewModel.cs" />
     <Compile Include="ViewModel\GeneralViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\Mensajes\DetalleMensajeViewModel.cs" />
+    <Compile Include="ViewModel\Mensajes\MisMensajesViewModel.cs" />
+    <Compile Include="ViewModel\PrincipalViewModel.cs" />
     <Compile Include="View\Alta.xaml.cs">
       <DependentUpon>Alta.xaml</DependentUpon>
     </Compile>
@@ -99,7 +104,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\ApiContactos\ContactosModel\ContactosModel.csproj">
+    <ProjectReference Include="..\..\..\ApiContactos2016XamGuay\ContactosModel\ContactosModel.csproj">
       <Project>{9ed0921c-59a3-4570-89e0-4b43e8faa31d}</Project>
       <Name>ContactosModel</Name>
     </ProjectReference>

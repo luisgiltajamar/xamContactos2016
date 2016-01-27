@@ -3,6 +3,7 @@ using System.Windows.Input;
 using ContactosModel.Model;
 using MvvmLibrary.Factorias;
 using RedContactos.Service;
+using RedContactos.ViewModel.Contactos;
 using Xamarin.Forms;
 
 namespace RedContactos.ViewModel
