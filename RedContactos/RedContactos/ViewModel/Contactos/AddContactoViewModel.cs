@@ -26,7 +26,7 @@ namespace RedContactos.ViewModel.Contactos
         }
 
         public ICommand CmdAdd { get; set; }
-        public AddContactoViewModel(INavigator navigator, IServicioMovil servicio) : base(navigator, servicio)
+        public AddContactoViewModel(INavigator navigator, IServicioMovil servicio, IPage page) : base(navigator, servicio, page)
         {
             CmdAdd=new Command(AddContacto);
         }

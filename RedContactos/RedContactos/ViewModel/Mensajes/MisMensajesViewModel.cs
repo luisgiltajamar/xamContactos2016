@@ -30,7 +30,7 @@ namespace RedContactos.ViewModel.Mensajes
         private MensajeModel _mensajeSeleccionado;
 
 
-        public MisMensajesViewModel(INavigator navigator, IServicioMovil servicio) : base(navigator, servicio)
+        public MisMensajesViewModel(INavigator navigator, IServicioMovil servicio, IPage page) : base(navigator, servicio, page)
         {
         }
 

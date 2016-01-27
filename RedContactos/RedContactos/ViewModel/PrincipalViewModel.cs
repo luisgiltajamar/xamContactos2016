@@ -6,6 +6,7 @@ using RedContactos.Service;
 using RedContactos.Util;
 using RedContactos.ViewModel.Contactos;
 using RedContactos.ViewModel.Mensajes;
+using Xamarin.Forms;
 
 namespace RedContactos.ViewModel
 {
@@ -13,8 +14,10 @@ namespace RedContactos.ViewModel
     {
         public ICommand CmdContactos { get; set; }
         public ICommand CmdMensajes { get; set; }
-        public PrincipalViewModel(INavigator navigator, IServicioMovil servicio) : base(navigator, servicio)
+        public PrincipalViewModel(INavigator navigator, IServicioMovil servicio, IPage page) : base(navigator, servicio, page)
         {
+            CmdContactos=new Command(RunContactos);
+            CmdMensajes=new Command(RunMensajes);
         }
 
         private async void RunMensajes()

@@ -32,7 +32,7 @@ namespace RedContactos.ViewModel.Contactos
 
         public ICommand CmdEnviar { get; set; }
 
-        public EnviarMensajeViewModel(INavigator navigator, IServicioMovil servicio) : base(navigator, servicio)
+        public EnviarMensajeViewModel(INavigator navigator, IServicioMovil servicio, IPage page) : base(navigator, servicio, page)
         {
             CmdEnviar=new Command(RunEnviarMensaje);
         }

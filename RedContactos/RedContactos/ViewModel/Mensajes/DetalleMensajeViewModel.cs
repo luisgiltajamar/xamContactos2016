@@ -15,7 +15,7 @@ namespace RedContactos.ViewModel.Mensajes
                 SetProperty(ref _mensaje , value);
             }
         }
-        public DetalleMensajeViewModel(INavigator navigator, IServicioMovil servicio) : base(navigator, servicio)
+        public DetalleMensajeViewModel(INavigator navigator, IServicioMovil servicio, IPage page) : base(navigator, servicio, page)
         {
         }
 
