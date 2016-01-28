@@ -54,11 +54,27 @@
     <Compile Include="View\Alta.xaml.cs">
       <DependentUpon>Alta.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ContactosView.xaml.cs">
+    <Compile Include="View\Borrame.cs" />
+    <Compile Include="View\Contactos\AddContactoView.xaml.cs">
+      <DependentUpon>AddContactoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Contactos\ContactosView.xaml.cs">
       <DependentUpon>ContactosView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Contactos\EnviarMensajeView.xaml.cs">
+      <DependentUpon>EnviarMensajeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mensajes\DetalleMensajeView.xaml.cs">
+      <DependentUpon>DetalleMensajeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mensajes\MisMensajesView.xaml.cs">
+      <DependentUpon>MisMensajesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrincipalView.xaml.cs">
+      <DependentUpon>PrincipalView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -113,7 +129,12 @@
       <Name>MvvmLibrary</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="View\PrincipalView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\LoginView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -127,7 +148,31 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\ContactosView.xaml">
+    <EmbeddedResource Include="View\Mensajes\MisMensajesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Mensajes\DetalleMensajeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Contactos\ContactosView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Contactos\EnviarMensajeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Contactos\AddContactoView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
