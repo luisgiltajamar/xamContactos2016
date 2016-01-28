@@ -29,7 +29,7 @@ namespace RedContactos.Module
             builder.RegisterType<DialogService>().As<IDialogService>().SingleInstance();
             builder.RegisterType<PageProxy>().As<IPage>().SingleInstance();
 
-
+            var a = "";
             builder.RegisterType<ServicioDatos>().As<IServicioMovil>().
                 SingleInstance();
             builder.RegisterType<LoginView>().SingleInstance();
