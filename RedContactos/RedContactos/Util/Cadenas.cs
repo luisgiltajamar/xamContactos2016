@@ -7,7 +7,17 @@ using System.Threading.Tasks;
 namespace RedContactos.Util
 {
    public static class Cadenas
-   {
+    {
+        // <ActivityIndicator IsVisible = "{Binding IsBusy,Mode=TwoWay}"
+        //             IsRunning="{Binding IsBusy,Mode=TwoWay}"
+        //             VerticalOptions="CenterAndExpand"
+        //RelativeLayout.XConstraint="{ConstraintExpression 
+        //             Type=RelativeToParent,
+        //             Property=Height,Factor=0.20}"
+        //RelativeLayout.YConstraint="{ConstraintExpression 
+        //             Type=RelativeToParent,Property=Height,
+        //             Factor=0.40}"
+        //             />
        public static String Url = "http://apicontactos20160121014558.azurewebsites.net/api";
 
        public static Dictionary<String, Object> Session=
