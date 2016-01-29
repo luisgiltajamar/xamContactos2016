@@ -20,10 +20,11 @@ namespace RedContactos.ViewModel.Mensajes
             get { return _mensajeSeleccionado; }
             set
             {
-                if(value!=null)
-                    VerDetalleMensaje();
+                
 
                 SetProperty(ref _mensajeSeleccionado, value);
+                if (value != null)
+                    VerDetalleMensaje();
             }
         }
 

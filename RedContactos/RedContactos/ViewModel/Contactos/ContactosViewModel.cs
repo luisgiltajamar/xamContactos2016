@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using ContactosModel.Model;
 using MvvmLibrary.Factorias;
+using RedContactos.Models;
 using RedContactos.Service;
 using Xamarin.Forms;
 
@@ -10,7 +11,7 @@ namespace RedContactos.ViewModel.Contactos
     public class ContactosViewModel:GeneralViewModel
     {
         private ObservableCollection<ContactoModel> _amigos;
-        private ObservableCollection<ContactoModel> _noAmigos;
+        private ObservableCollection<NoAmigosModel> _noAmigos;
         private ContactoModel _contactoSeleccionado;
 
         public ObservableCollection<ContactoModel> Amigos
@@ -19,7 +20,7 @@ namespace RedContactos.ViewModel.Contactos
             set { SetProperty(ref _amigos , value); }
         }
 
-        public ObservableCollection<ContactoModel> NoAmigos
+        public ObservableCollection<NoAmigosModel> NoAmigos
         {
             get { return _noAmigos; }
             set { SetProperty(ref _noAmigos , value); }
@@ -30,12 +31,14 @@ namespace RedContactos.ViewModel.Contactos
             get { return _contactoSeleccionado; }
             set
             {
+                SetProperty(ref _contactoSeleccionado, value);
+
                 if (value != null)
                 {
                     RunAddMensaje();
                 }
 
-                SetProperty(ref _contactoSeleccionado, value);
+                
             }
         }
 
@@ -43,7 +46,7 @@ namespace RedContactos.ViewModel.Contactos
 
         public ContactosViewModel(INavigator navigator, IServicioMovil servicio, IPage page) : base(navigator, servicio, page)
         {
-            CmdNuevo=new Command(RunNuevoContacto);
+            CmdNuevo = new Command(RunNuevoContacto);
         }
 
         private async void RunNuevoContacto()
@@ -62,6 +65,7 @@ namespace RedContactos.ViewModel.Contactos
                 viewModel.Contacto = ContactoSeleccionado;
                 viewModel.Mensaje=new MensajeModel();
             });
+            ContactoSeleccionado = null;
         }
     }
 }

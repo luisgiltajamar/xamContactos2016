@@ -4,7 +4,7 @@
              x:Class="RedContactos.View.Contactos.ContactosView">
 <StackLayout>
   <ListView ItemsSource="{Binding Amigos}" 
-            SelectedItem="{Binding ContactoSeleccionado}">
+            SelectedItem="{Binding ContactoSeleccionado,Mode=TwoWay}">
   <ListView.ItemTemplate>
     <DataTemplate>
       <TextCell Text="{Binding nombreCompleto}"></TextCell>
