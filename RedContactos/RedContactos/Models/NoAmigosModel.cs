@@ -20,6 +20,7 @@ namespace RedContactos.Models
         private void RunComandoAdd()
         {
             var vm = ComponentContext.Resolve<AddContactoViewModel>();
+            await 
             vm.Amigos.Add(ContactoModel);
             vm.NoAmigos.Remove(this);
 
