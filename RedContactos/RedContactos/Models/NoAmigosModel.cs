@@ -17,13 +17,19 @@ namespace RedContactos.Models
             CmdAdd=new Command(RunComandoAdd);
         }
 
-        private void RunComandoAdd()
+        private async void RunComandoAdd()
         {
             var vm = ComponentContext.Resolve<AddContactoViewModel>();
-            await 
-            vm.Amigos.Add(ContactoModel);
-            vm.NoAmigos.Remove(this);
-
+            var d=await vm._servicio.AddContacto(ContactoModel);
+            if (d != null)
+            {
+                vm.Amigos.Add(ContactoModel);
+                vm.NoAmigos.Remove(this);
+                await vm._page.MostrarAlerta("Exito", "Contacto añadido", "Ok");
+                
+            }
+            else
+                await vm._page.MostrarAlerta("Error", "Contacto no añadido", "Ok");
         }
     }
 }
