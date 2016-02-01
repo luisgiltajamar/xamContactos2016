@@ -62,7 +62,7 @@ namespace RedContactos.Module
                 var main = viewFactory.Resolve<PrincipalViewModel>();
                 var np = new NavigationPage(main);
                 _application.MainPage = np;
-                var a = "";
+                
             }
 
 
