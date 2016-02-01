@@ -9,6 +9,7 @@
                >
     
   
+    <Image Source="monoxamarin.jpg" Aspect="AspectFit" />
     <Label Text="Login"/>
     <Entry Text="{Binding Usuario.login}"/>
     <Label Text="Password"/>

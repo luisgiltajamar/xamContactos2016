@@ -123,6 +123,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\contacto.png" />
+    <Content Include="Assets\monoxamarin.jpg" />
     <Content Include="README_FIRST.txt" />
     <Content Include="SplashScreenImage.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -98,12 +98,6 @@
     <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RedContactos\RedContactos.csproj">
-      <Name>RedContactos</Name>
-      <Project>{DC4950F6-3F32-4D63-9933-ED97CCA43008}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Default-Portrait.png" />
     <BundleResource Include="Resources\Default-Portrait%402x.png" />
@@ -147,6 +141,18 @@
     <Reference Include="Xamarin.Forms.Xaml, Version=1.3.3.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Forms.1.3.3.6323\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\contacto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monoxamarin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RedContactos\RedContactos.csproj">
+      <Project>{dc4950f6-3f32-4d63-9933-ed97cca43008}</Project>
+      <Name>RedContactos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

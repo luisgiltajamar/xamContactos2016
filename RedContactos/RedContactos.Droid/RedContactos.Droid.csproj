@@ -99,6 +99,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\drawable\contacto.png" />
+    <AndroidResource Include="Resources\drawable\monoxamarin.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RedContactos\RedContactos.csproj">
