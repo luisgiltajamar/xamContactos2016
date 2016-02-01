@@ -20,6 +20,7 @@ namespace RedContactos.Util
         //             />
        public static String Url = "http://apicontactos20160121014558.azurewebsites.net/api";
 
+       public static string FicheroSettings = "contact.dat";
        public static Dictionary<String, Object> Session=
             new Dictionary<String,Object>();
 

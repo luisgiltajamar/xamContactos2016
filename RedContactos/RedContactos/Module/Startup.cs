@@ -1,6 +1,11 @@
-﻿using Autofac;
+﻿using System;
+using Autofac;
+using ContactosModel.Model;
 using MvvmLibrary.Factorias;
 using MvvmLibrary.ModuloBase;
+using Newtonsoft.Json;
+using RedContactos.Service;
+using RedContactos.Util;
 using RedContactos.View;
 using RedContactos.View.Contactos;
 using RedContactos.View.Mensajes;
@@ -40,9 +45,28 @@ namespace RedContactos.Module
         protected override void ConfigureApplication(IContainer container)
         {
             var viewFactory = container.Resolve<IViewFactory>();
-            var main = viewFactory.Resolve<LoginViewModel>();
-            var np = new NavigationPage(main);
-            _application.MainPage = np;
+
+            var txt = DependencyService.Get<IServicioFicheros>().RecuperarTexto(Cadenas.FicheroSettings);
+            if (String.IsNullOrEmpty(txt))
+            {
+                var main = viewFactory.Resolve<LoginViewModel>();
+                var np = new NavigationPage(main);
+                _application.MainPage = np;
+
+            }
+            else
+            {
+              var data=  JsonConvert.DeserializeObject<UsuarioModel>(txt);
+
+                Cadenas.Session["usuario"] = data;
+                var main = viewFactory.Resolve<PrincipalViewModel>();
+                var np = new NavigationPage(main);
+                _application.MainPage = np;
+
+            }
+
+
+            
         }
     }
 }

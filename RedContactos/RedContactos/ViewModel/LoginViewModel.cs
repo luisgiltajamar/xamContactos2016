@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using ContactosModel.Model;
 using MvvmLibrary.Factorias;
+using Newtonsoft.Json;
 using RedContactos.Service;
 using RedContactos.Util;
 using RedContactos.ViewModel.Contactos;
@@ -34,6 +35,9 @@ namespace RedContactos.ViewModel
                 var us=await _servicio.ValidarUsuario(Usuario);
                 if (us != null)
                 {
+                    var txt = JsonConvert.SerializeObject(us);
+                    DependencyService.Get<IServicioFicheros>().GuardarTexto(txt,Cadenas.FicheroSettings);
+
                     Cadenas.Session["usuario"] = us;
                   await  _navigator.PushAsync<PrincipalViewModel>(
                       viewModel =>
