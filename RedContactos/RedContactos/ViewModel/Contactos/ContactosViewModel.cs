@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 using ContactosModel.Model;
 using MvvmLibrary.Factorias;
@@ -54,11 +56,20 @@ namespace RedContactos.ViewModel.Contactos
                 var a = "";
 
             });
+            MessagingCenter.Unsubscribe<string>(this,"Hola");
+
+            MessagingCenter.Subscribe<ContactoModel>(this,"AddContacto", (sender) =>
+            {
+                Amigos.Add(sender);
+                
+
+            });
+            
         }
 
         private async void RunNuevoContacto()
         {
-            MessagingCenter.Send("Hola don pepito","Hola");
+            MessagingCenter.Send(new List<String>(), "Hola");
 
             await _navigator.PushAsync<AddContactoViewModel>(viewModel =>
             {
